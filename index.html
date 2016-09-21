@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table cell row column highlight</title>
+	<style type="text/css">
+		.main {
+			margin: 0 auto;
+			width: 600px;
+			margin-top: 150px;
+		}
+		table {
+			width: 100%;
+			overflow: hidden;
+		}
+		tr {
+			text-align: center;
+		}
+		tr:hover {
+			background-color: #dee6ec;
+		}
+		td{
+			position: relative;
+			padding: 0px;
+		}
+		td:hover, th:hover {
+			background-color: #bfc5ca;
+		}
+		td:not(:first-child):hover:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			left:0px;
+			height: 10000px;
+			background-color:  #dee6ec;
+			top: -5000px;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<table>
+			<thead>
+				<th>Candidate Name</th>
+				<th>2010</th>
+				<th>2011</th>
+				<th>2012</th>
+				<th>2013</th>
+				
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>150</td>
+					<td>70</td>
+					<td>80</td>
+					<td>95</td>
+				</tr>
+				<tr>
+					<td>Bob</td>
+					<td>35</td>
+					<td>40</td>
+					<td>25</td>
+					<td>35</td>
+				</tr>
+				<tr>
+					<td>Mike</td>
+					<td>200</td>
+					<td>250</td>
+					<td>278</td>
+					<td>450</td>
+				</tr>
+				<tr>
+					<td>Gus</td>
+					<td>150</td>
+					<td>111</td>
+					<td>89</td>
+					<td>154</td>
+				</tr>
+				<tr>
+					<td>Saul</td>
+					<td>600</td>
+					<td>456</td>
+					<td>700</td>
+					<td>489</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
